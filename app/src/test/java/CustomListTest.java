@@ -27,13 +27,14 @@ public class CustomListTest {
     public void hasCityTest() {
         Boolean ans = true;
         City city = new City("Edmonton", "AB");
+        list.addCity(city);
         assertEquals(list.hasCity(city), true);
     }
 
     @Test
     public void deleteCityTest() {
         City city = new City("Edmonton", "AB");
-        list.add(city);
+        list.addCity(city);
         assertEquals(list.hasCity(city), true);
         list.deleteCity(city);
         assertEquals(list.hasCity(city), false);
